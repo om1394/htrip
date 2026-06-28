@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>🏔️ Hokkaido 14–20 พฤศจิกายน 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#1a2f5e;--navy-light:#24407a;--navy-dark:#0f1e3d;
+  --gold:#c8963a;--gold-light:#e8b45a;
+  --blue:#4a9eb5;--blue-light:#d4eef5;
+  --red:#c8362b;--red-light:#fdf0ee;
+  --snow:#f8f6f1;--white:#ffffff;
+  --text:#1e1e1e;--muted:#666;--border:#e4e0d8;
+  --green:#2d7a4f;--green-light:#edfaf0;
+  --amber:#b87d00;--amber-light:#fff8e8;
+  --purple:#6b3296;--purple-light:#f5f0ff;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Noto Sans Thai','Plus Jakarta Sans','Segoe UI Variable','Segoe UI',system-ui,sans-serif;background:var(--snow);color:var(--text);font-size:17px;line-height:1.75}
+a{color:var(--blue);text-decoration:none}a:hover{text-decoration:underline}
+
+/* NAV */
+.toc{background:var(--navy);color:#fff;padding:12px 24px;position:sticky;top:0;z-index:100;display:flex;gap:16px;flex-wrap:wrap;align-items:center;box-shadow:0 2px 8px rgba(0,0,0,.3)}
+.toc-title{font-weight:700;font-size:15px;opacity:.8;margin-right:8px}
+.toc a{color:rgba(255,255,255,.75);font-size:13.5px;padding:3px 8px;border-radius:12px;background:rgba(255,255,255,.08);white-space:nowrap}
+.toc a:hover{background:rgba(255,255,255,.18);color:#fff;text-decoration:none}
+
+/* WRAPPER */
+.wrap{max-width:900px;margin:0 auto;padding:24px 16px 60px}
+
+/* HERO */
+.hero{background:linear-gradient(135deg,var(--navy-dark) 0%,var(--navy) 50%,var(--navy-light) 100%);color:#fff;border-radius:16px;padding:32px;margin-bottom:20px;position:relative;overflow:hidden}
+.hero::before{content:'北海道';position:absolute;right:-16px;top:-20px;font-size:120px;opacity:.06;font-weight:900;line-height:1;pointer-events:none}
+.hero::after{content:'❄';position:absolute;right:32px;bottom:20px;font-size:60px;opacity:.08;pointer-events:none}
+.hero h1{font-size:34px;font-weight:800;letter-spacing:.5px;margin-bottom:4px}
+.hero .sub{opacity:.7;font-size:16px;margin-bottom:18px}
+.hero-pills{display:flex;gap:8px;flex-wrap:wrap}
+.hpill{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);border-radius:20px;padding:6px 15px;font-size:14.5px}
+
+/* SECTION HEADER */
+.sec-head{display:flex;align-items:center;gap:10px;margin:24px 0 12px;padding-bottom:8px;border-bottom:2px solid var(--border)}
+.sec-head h2{font-size:21px;font-weight:800;color:var(--navy)}
+.sec-icon{width:32px;height:32px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
+
+/* INFO CARD GRID */
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px}
+.info-card{background:#fff;border-radius:14px;padding:18px;border-left:4px solid var(--gold);box-shadow:0 1px 4px rgba(0,0,0,.06)}
+.info-card.blue-b{border-left-color:var(--blue)}
+.info-card.green-b{border-left-color:var(--green)}
+.info-card.red-b{border-left-color:var(--red)}
+.info-card h4{font-size:12.5px;text-transform:uppercase;letter-spacing:.8px;color:#999;margin-bottom:8px}
+.info-card p{font-size:15.5px;line-height:1.6}
+.info-card strong{color:var(--navy)}
+.info-card .url-row{margin-top:8px}
+.url-badge{display:inline-flex;align-items:center;gap:4px;background:var(--blue-light);color:var(--blue);font-size:13.5px;padding:3px 9px;border-radius:10px;font-weight:600}
+
+/* WARNING BOX */
+.warn{background:var(--red-light);border:1px solid #f5c5c0;border-left:4px solid var(--red);border-radius:10px;padding:16px 20px;margin:12px 0;font-size:15px}
+.warn strong{color:var(--red)}
+.note{background:var(--amber-light);border-left:4px solid var(--gold);border-radius:10px;padding:16px 20px;margin:10px 0;font-size:15px;color:#6b5300}
+.tip{background:var(--blue-light);border-left:3px solid var(--blue);border-radius:0 8px 8px 0;padding:10px 14px;margin:9px 0;font-size:14.5px;color:#1a5a72}
+
+/* ROUTE BOX */
+.route-box{background:#fff;border-radius:10px;padding:12px 16px;border:1px solid var(--border);margin:10px 0}
+.route-steps{display:flex;align-items:center;gap:7px;flex-wrap:wrap;font-size:14px}
+.rs-loc{font-weight:700;color:var(--navy);background:#eef2ff;padding:5px 14px;border-radius:14px}
+.rs-arrow{color:#bbb;font-size:16px}
+.rs-time{font-size:13.5px;color:#888;background:#f0f0f0;padding:2px 8px;border-radius:10px}
+.route-meta{display:flex;gap:12px;margin-top:8px;flex-wrap:wrap}
+.rmeta-item{font-size:14px;color:var(--muted);display:flex;align-items:center;gap:4px}
+.rmeta-item strong{color:var(--text)}
+
+/* DAY CARD */
+.day-card{background:#fff;border-radius:16px;margin-bottom:14px;overflow:hidden;box-shadow:0 1px 5px rgba(0,0,0,.07);border:1px solid var(--border)}
+.day-header{display:flex;align-items:stretch}
+.day-num{width:68px;min-width:68px;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;padding:12px 0;text-align:center}
+.day-num .dn{font-size:30px;font-weight:800;line-height:1}
+.day-num .dw{font-size:12px;opacity:.8;margin-top:2px;letter-spacing:.3px}
+.day-num .mo{font-size:9px;opacity:.6;margin-top:1px}
+.day-info{padding:14px 18px;flex:1;background:#fafaf8;border-bottom:1px solid var(--border)}
+.day-info h3{font-size:19px;font-weight:700}
+.day-info .dsub{font-size:15px;color:var(--muted);margin-top:2px}
+.day-hotel{font-size:14px;margin-top:6px;color:var(--purple);background:var(--purple-light);padding:3px 10px;border-radius:10px;display:inline-block}
+.day-tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}
+.dtag{font-size:13px;padding:2px 9px;border-radius:20px;font-weight:500;background:#eef2ff;color:#3b5bdb}
+.dtag.g{background:var(--green-light);color:var(--green)}
+.dtag.o{background:var(--amber-light);color:var(--amber)}
+.dtag.t{background:var(--blue-light);color:#0d6b82}
+.dtag.r{background:var(--red-light);color:var(--red)}
+
+.day-body{padding:18px 20px 20px}
+.tstrip{font-size:14.5px;padding:10px 15px;border-radius:7px;margin-bottom:12px;border:1px solid;display:flex;align-items:center;gap:8px}
+.ts-d{background:#fff8ed;color:#8a5600;border-color:#f5d08a}
+.ts-t{background:#eff6ff;color:#1a56a8;border-color:#bdd6f8}
+.ts-w{background:#f5f5f5;color:#555;border-color:#ddd}
+
+/* ACTIVITY LIST */
+.acts{list-style:none;display:flex;flex-direction:column;gap:15px}
+.act{display:flex;gap:10px}
+.at{min-width:58px;font-size:13px;color:#bbb;font-weight:700;padding-top:2px;white-space:nowrap}
+.ac{}
+.ac .name{font-size:17px;font-weight:700;color:var(--text)}
+.ac .desc{font-size:15px;color:var(--muted);margin-top:1px;line-height:1.5}
+.act-url{display:inline-flex;align-items:center;gap:4px;background:var(--blue-light);color:var(--blue);font-size:13px;padding:2px 8px;border-radius:8px;margin-top:4px;font-weight:600}
+.overnight{margin-top:14px;background:var(--purple-light);border-radius:8px;padding:12px 16px;font-size:15.5px;color:var(--purple)}
+
+/* FOOD SECTION */
+.food-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:12px 0}
+.food-card{background:var(--snow);border-radius:12px;padding:18px;border:1px solid var(--border)}
+.food-card .emoji{font-size:32px;margin-bottom:6px;display:block}
+.food-card .fn{font-size:16.5px;font-weight:700;color:var(--navy);margin-bottom:4px}
+.food-card .frest{font-size:14.5px;color:var(--muted)}
+.food-card .fprice{font-size:14px;color:var(--green);font-weight:600;margin-top:4px}
+
+/* LINKS TABLE */
+.links-table{width:100%;border-collapse:collapse;font-size:14.5px}
+.links-table th{background:var(--navy);color:#fff;padding:8px 12px;text-align:left;font-weight:600;font-size:11px}
+.links-table td{padding:8px 12px;border-bottom:1px solid var(--border);vertical-align:top}
+.links-table tr:nth-child(even) td{background:#fafaf8}
+.links-table a{color:var(--blue);word-break:break-all}
+
+/* COLORS */
+.c-arr{background:#5a6478}
+.c-sap{background:var(--navy)}
+.c-asa{background:#2d6a4f}
+.c-bei{background:#1e6fa8}
+.c-d18{background:var(--purple)}
+.c-ota{background:#0d7d6b}
+.c-fly{background:#5a6478}
+
+@media(max-width:620px){
+  .grid2,.food-grid{grid-template-columns:1fr}
+  .hero{padding:22px 18px}
+  .day-num{width:56px;min-width:56px}
+  .hero h1{font-size:20px}
+}
+
+hr.snow{border:none;border-top:1px dashed var(--border);margin:20px 0}
+</style>
+</head>
+<body>
+
+<nav class="toc">
+  <span class="toc-title">🏔️ ฮอกไกโด 2026</span>
+  <a href="#airport">สนามบิน</a>
+  <a href="#car">รถเช่า</a>
+  <a href="#d14">14 พ.ย.</a>
+  <a href="#d15">15 พ.ย.</a>
+  <a href="#d16">16 พ.ย.</a>
+  <a href="#d17">17 พ.ย.</a>
+  <a href="#d18">18 พ.ย.</a>
+  <a href="#d19">19 พ.ย.</a>
+  <a href="#d20">20 พ.ย.</a>
+  <a href="#food">อาหาร</a>
+  <a href="#links">ลิงก์</a>
+</nav>
+
+<div class="wrap">
+
+<!-- HERO -->
+<div class="hero">
+  <h1>🏔️ Hokkaido Road Trip</h1>
+  <div class="sub">14–20 พฤศจิกายน 2026 &nbsp;·&nbsp; 7 วัน 6 คืน &nbsp;·&nbsp; 4 ผู้ใหญ่</div>
+  <div class="hero-pills">
+    <span class="hpill">🌡️ 1–7°C กลางวัน</span>
+    <span class="hpill">🚗 Toyota Noah 3 วัน</span>
+    <span class="hpill">🏨 4 โรงแรม 6 คืน</span>
+    <span class="hpill">✈️ XJ620 ถึง CTS 10:40</span>
+    <span class="hpill">✈️ HX691 ออก 15:20</span>
+    <span class="hpill">🧥 Down jacket + ถุงมือ + รองเท้ากันลื่น</span>
+  </div>
+</div>
+
+<!-- ═══ AIRPORT ═══ -->
+<div id="airport">
+<div class="sec-head">
+  <div class="sec-icon" style="background:#e8eef8">✈️</div>
+  <h2>การเดินทางสนามบิน</h2>
+</div>
+
+<div class="grid2">
+  <div class="info-card blue-b">
+    <h4>✈️ → 🏙️ ขาเข้า — วันที่ 14 พ.ย. (XJ620 ถึง 10:40)</h4>
+    <p><strong>แนะนำ: รถบัส Limousine 🚌</strong> — ไม่ต้องยกกระเป๋าผ่านประตูรถไฟ<br><br>
+    10:40 · ลงเครื่อง ตม. รับกระเป๋า<br>
+    11:30 · ออกมา → <strong>ชั้น 1</strong> ป้ายรถบัส (ANA/JAL side)<br>
+    11:45 · ขึ้นรถบัส Hokuto Kotsu / Chuo Bus<br>
+    ~12:50 · ถึง <strong>Susukino</strong> (La'gent ~450 ม.) หรือ <strong>Nakajima Park</strong> (Livemax ~400 ม.)<br><br>
+    ✈️ <strong>JR ทางเลือก:</strong> B1 ใต้ดิน → Rapid Airport 37 นาที ¥1,150<br>
+    (เร็วกว่า แต่ต้องสแกนประตู + ยกกระเป๋าขึ้น-ลง)</p>
+    <div class="url-row"><a href="https://www.hokto.co.jp/en/sapporo-chitose/" class="url-badge">🔗 Hokuto Kotsu Bus</a>&nbsp;<a href="https://www.chuo-bus.co.jp/airport.en/" class="url-badge">🔗 Chuo Bus</a></div>
+  </div>
+  <div class="info-card blue-b">
+    <h4>🏙️ → ✈️ ขาออก — วันที่ 20 พ.ย. (HX691 ออก 15:20)</h4>
+    <p><strong>แนะนำ: รถบัส Limousine 🚌</strong> — กระเป๋าอยู่ท้ายรถ ไม่ยุ่งยาก<br><br>
+    10:30 · Checkout La'gent Stay Odori<br>
+    10:40 · เดิน <strong>~450 ม.</strong> ถึงป้าย <strong>Susukino (Minami 4, Nishi 3)</strong><br>
+    11:00 · ขึ้นรถบัส → ถึงสนามบิน ~12:10 น. ✅<br>
+    12:10–15:00 · เช็คอิน HX691 + ช้อปของฝาก<br>
+    15:20 · ✈️ HX691 ออก!<br><br>
+    ✈️ <strong>JR ทางเลือก:</strong> เดิน 12 นาที → JR 11:45 → CTS 12:22<br>
+    💡 <strong>Taxi:</strong> ~¥5,000–6,000 ถึงสนามบิน ~45 นาที</p>
+    <div class="url-row"><a href="https://www.hokto.co.jp/en/sapporo-chitose/" class="url-badge">🔗 Hokuto Kotsu Bus</a></div>
+  </div>
+</div>
+
+<div class="grid2" style="margin-bottom:10px">
+  <div class="info-card" style="border-left-color:var(--green)">
+    <h4>🚌 รถบัส Limousine — ข้อมูลสำคัญ</h4>
+    <p><strong>บริษัท:</strong> Hokuto Kotsu &amp; Hokkaido Chuo Bus<br>
+    <strong>ค่าโดยสาร:</strong> ¥1,500/คน (4 คน = ¥6,000)<br>
+    <strong>เวลาเดินทาง:</strong> ~65–80 นาที<br>
+    <strong>กระเป๋า:</strong> ใส่ท้ายรถ 1 ใบ/คน (4 ใบพอดี!)<br>
+    <strong>จ่าย:</strong> บนรถ — เงินสด / บัตรเครดิต / PayPay<br>
+    <strong>จอง:</strong> ไม่ต้องจอง ขึ้นถึงเลย<br>
+    <strong>จุดขึ้น CTS:</strong> <em>ชั้น 1</em> อาคาร Domestic Terminal<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(ฝั่ง ANA หรือ JAL — ป้าย Bus Stop 14/22/84)</p>
+    <div class="url-row"><a href="https://www.hokto.co.jp/en/sapporo-chitose/" class="url-badge">🔗 Hokuto Kotsu</a>&nbsp;<a href="https://www.chuo-bus.co.jp/airport.en/" class="url-badge">🔗 Chuo Bus</a></div>
+  </div>
+  <div class="info-card" style="border-left-color:var(--purple)">
+    <h4>📍 ป้ายรถบัสใกล้โรงแรม</h4>
+    <p>
+    <strong>🏨 Hotel Livemax Susukino</strong><br>
+    ที่อยู่: Minami 7-jo Nishi 6<br>
+    ป้ายแนะนำ: <strong>Nakajima Park</strong> (~400 ม.) ✅<br>
+    หรือ Susukino (Minami 3–4 jo) (~650 ม.)<br>
+    <br>
+    <strong>🏨 La'gent Stay Sapporo Odori</strong><br>
+    ที่อยู่: Minami 2-jo Nishi 5<br>
+    ป้ายแนะนำ: <strong>Susukino (Minami 4, Nishi 3)</strong> ✅<br>
+    ระยะ: <strong>~450 เมตร</strong> เดิน ~6 นาที<br>
+    </p>
+  </div>
+</div>
+<div class="note">💡 แนะนำซื้อ <strong>IC Card Kitaca</strong> ตอนถึงสนามบิน — ใช้แตะรถไฟ+รถเมล์ได้ทั่วฮอกไกโด ไม่ต้องซื้อตั๋วทีละครั้ง</div>
+</div>
+
+<hr class="snow">
+
+<!-- ═══ CAR RENTAL ═══ -->
+<div id="car">
+<div class="sec-head">
+  <div class="sec-icon" style="background:#fff3e0">🚗</div>
+  <h2>รถเช่า &amp; เส้นทางขับ (วันที่ 16–18)</h2>
+</div>
+
+<div class="grid2">
+  <div class="info-card">
+    <h4>🏢 Nippon Rent-a-Car Susukino</h4>
+    <p><strong>รับรถ:</strong> 16 พ.ย. เวลา 08:00 น.<br>
+    <strong>คืนรถ:</strong> 18 พ.ย. ~17:00 น. (สาขา Susukino)<br>
+    <strong>รถที่จอง:</strong> Toyota Noah (8 ที่นั่ง Large Minivan)<br><br>
+    📋 <strong>ต้องขอตอนจอง:</strong><br>
+    ✅ Studless Winter Tires (ยางหน้าหนาว)<br>
+    ✅ ETC Card (บัตรทางด่วน ~¥330/วัน)<br>
+    ✅ CDW Insurance (ประกันชน)<br>
+    ✅ NOC Waiver (ยกเว้นค่าชดเชย)</p>
+    <div class="url-row"><a href="https://www.nipponrentacar.co.jp/english/" class="url-badge">🔗 Nippon Rent-a-Car</a></div>
+  </div>
+  <div class="info-card green-b">
+    <h4>💰 ค่าใช้จ่ายรถโดยประมาณ (3 วัน)</h4>
+    <p><strong>ค่าเช่า Toyota Noah:</strong> ¥25,000–35,000<br>
+    <strong>Winter Tires:</strong> มักรวมอยู่แล้วในฮอกไกโด พ.ย.<br>
+    <strong>ETC Card:</strong> ¥330 × 3 วัน = ¥990<br>
+    <strong>CDW Insurance:</strong> ~¥1,500/วัน<br><br>
+    <strong>ค่าทางด่วน (ประมาณ):</strong><br>
+    Day 16 Sapporo→Asahikawa: ~¥2,270<br>
+    Day 18 Furano→Noboribetsu: ~¥2,500<br>
+    Day 18 Noboribetsu→Sapporo: ~¥1,500<br>
+    <strong>รวมค่าทางด่วน: ~¥6,500</strong></p>
+  </div>
+</div>
+
+<h4 style="font-size:14px;font-weight:700;color:var(--navy);margin:16px 0 10px">🗺️ เส้นทางวันต่อวัน</h4>
+
+<!-- DAY 16 ROUTE -->
+<div class="route-box">
+  <strong style="color:var(--green);font-size:12px">📍 วันที่ 16 — Sapporo → Asahikawa</strong>
+  <div class="route-steps" style="margin:8px 0">
+    <span class="rs-loc">Nippon Susukino</span><span class="rs-arrow">→</span>
+    <span class="rs-time">Route 12 เหนือ</span>
+    <span class="rs-loc">Sapporo IC</span><span class="rs-arrow">→</span>
+    <span class="rs-time">E5 ด่วน ~120 กม.</span>
+    <span class="rs-loc">Asahikawa IC</span><span class="rs-arrow">→</span>
+    <span class="rs-time">Route 39</span>
+    <span class="rs-loc">Asahikawa Zoo</span>
+  </div>
+  <div class="route-meta">
+    <span class="rmeta-item">📏 <strong>~130 กม.</strong></span>
+    <span class="rmeta-item">⏱️ <strong>~1.5 ชม.</strong></span>
+    <span class="rmeta-item">💴 ทางด่วน <strong>~¥2,270</strong></span>
+    <span class="rmeta-item">⚠️ ออกก่อน 08:00 ถึง Zoo ทันเปิด 09:30</span>
+  </div>
+</div>
+
+<!-- DAY 17 ROUTE -->
+<div class="route-box">
+  <strong style="color:var(--blue);font-size:12px">📍 วันที่ 17 — Asahikawa → Biei → Furano (ถนนฟรีทั้งวัน)</strong>
+  <div class="route-steps" style="margin:8px 0">
+    <span class="rs-loc">Art Hotel</span><span class="rs-arrow">→</span>
+    <span class="rs-time">Route 237 ใต้ ~35 กม.</span>
+    <span class="rs-loc">Patchwork Road</span><span class="rs-arrow">→</span>
+    <span class="rs-time">15 นาที</span>
+    <span class="rs-loc">Shirahige Falls</span><span class="rs-arrow">→</span>
+    <span class="rs-time">5 นาที</span>
+    <span class="rs-loc">Blue Pond</span><span class="rs-arrow">→</span>
+    <span class="rs-time">Route 237 ใต้ ~30 กม.</span>
+    <span class="rs-loc">Furano Chalet</span>
+  </div>
+  <div class="route-meta">
+    <span class="rmeta-item">📏 <strong>~80 กม.</strong> รวม</span>
+    <span class="rmeta-item">⏱️ ขับรวม <strong>~1.5 ชม.</strong></span>
+    <span class="rmeta-item">💴 ทางด่วน <strong>¥0</strong> (ใช้ถนนปกติ)</span>
+    <span class="rmeta-item">❄️ ถนน Biei อาจลื่นตอนเช้า ระวัง</span>
+  </div>
+</div>
+
+<!-- DAY 18 ROUTE -->
+<div class="route-box" style="border-left:3px solid var(--purple)">
+  <strong style="color:var(--purple);font-size:12px">📍 วันที่ 18 — Furano → Noboribetsu → Sapporo → คืนรถ</strong>
+  <div class="route-steps" style="margin:8px 0">
+    <span class="rs-loc">Furano</span><span class="rs-arrow">→</span>
+    <span class="rs-time">Route 38 ตะวันตก 35 กม.</span>
+    <span class="rs-loc">Tomamu IC (E38)</span><span class="rs-arrow">→</span>
+    <span class="rs-time">E38→Chitose ~80 กม. 1 ชม.</span>
+    <span class="rs-loc">Chitose JCT → E5 ใต้</span><span class="rs-arrow">→</span>
+    <span class="rs-time">~50 กม. 40 นาที</span>
+    <span class="rs-loc">Noboribetsu IC</span><span class="rs-arrow">→</span>
+    <span class="rs-time">Route 2 ใต้ 5 กม.</span>
+    <span class="rs-loc">Jigokudani</span>
+  </div>
+  <div class="route-steps" style="margin:6px 0">
+    <span class="rs-loc">Noboribetsu</span><span class="rs-arrow">→</span>
+    <span class="rs-time">E5 เหนือ ~88 กม. 1 ชม.</span>
+    <span class="rs-loc">Sapporo</span><span class="rs-arrow">→</span>
+    <span class="rs-time">ขับเข้าเมือง 15 นาที</span>
+    <span class="rs-loc">Nippon Susukino (คืนรถ)</span>
+  </div>
+  <div class="route-meta">
+    <span class="rmeta-item">📏 <strong>~265 กม.</strong> รวม</span>
+    <span class="rmeta-item">⏱️ ขับรวม <strong>~3.5 ชม.</strong></span>
+    <span class="rmeta-item">💴 ทางด่วน <strong>~¥4,000</strong></span>
+    <span class="rmeta-item">⏰ ออก Furano <strong>08:00</strong> ถึง Noboribetsu ~10:15</span>
+  </div>
+  <div class="tip" style="margin-top:8px">หลังคืนรถ Susukino → เดินหรือ taxi 15 นาที ถึง La'gent Stay Odori &nbsp;|&nbsp; หรือถามตอนจองว่าคืนที่สาขา Odori/ใกล้เมืองได้ไหม</div>
+</div>
+</div>
+
+<hr class="snow">
+
+<!-- ═══ DAY 14 ═══ -->
+<div id="d14">
+<div class="day-card">
+  <div class="day-header">
+    <div class="day-num c-arr"><div class="dn">14</div><div class="dw">SAT</div><div class="mo">NOV</div></div>
+    <div class="day-info">
+      <h3>✈️ เดินทางถึง Sapporo</h3>
+      <div class="dsub">ลงเครื่อง · เช็คอิน · สำรวจ Susukino</div>
+      <div class="day-hotel">🏨 Hotel Livemax Sapporo Susukino</div>
+      <div class="day-tags"><span class="dtag">New Chitose</span><span class="dtag">Sapporo</span><span class="dtag">ไม่ใช้รถ</span></div>
+    </div>
+  </div>
+  <div class="day-body">
+    <div class="tstrip ts-d">🚌 รถบัส Limousine ชั้น 1 CTS → Susukino / Nakajima Park · ~65–80 นาที · ¥1,500 กระเป๋าอยู่ท้ายรถ · หรือ 🚃 JR B1 → Sapporo 37 นาที ¥1,150</div>
+    <ul class="acts">
+      <li class="act"><div class="at">10:40</div><div class="ac"><div class="name">🛬 XJ620 ลงสนามบิน New Chitose (CTS)</div><div class="desc">ผ่านตม. + รับกระเป๋าที่ชั้น 1 · ใช้เวลา ~45–50 นาที</div></div></li>
+      <li class="act"><div class="at">11:30</div><div class="ac"><div class="name">🚌 ขึ้นรถบัส Limousine ที่ชั้น 1 อาคาร Domestic</div><div class="desc">ป้าย Bus Stop 14 / 22 / 84 ฝั่ง ANA หรือ JAL · กระเป๋าทั้ง 4 ใบใส่ท้ายรถได้เลย ไม่ต้องแบก<br>จ่ายบนรถ ¥1,500/คน · เลือก <strong>Hokuto Kotsu สาย Direct</strong></div></div></li>
+      <li class="act"><div class="at">~12:50</div><div class="ac"><div class="name">🏨 ลงป้าย Nakajima Park → เดิน ~400 ม. เช็คอิน Hotel Livemax Susukino</div><div class="desc">หรือลงป้าย Susukino แล้วเดิน ~650 ม. · พักผ่อน วางกระเป๋า อาบน้ำ</div></div></li>
+      <li class="act"><div class="at">14:00</div><div class="ac"><div class="name">🏙️ เดิน Susukino · Tanukikoji Shopping Arcade</div><div class="desc">ช้อปปิ้งและสำรวจย่านบันเทิงใต้หลังคา ไม่ต้องวางแผนมาก ปล่อยตามสบาย</div></div></li>
+      <li class="act"><div class="at">19:00</div><div class="ac"><div class="name">🍜 Ramen Yokocho — ซอยราเมง Susukino</div><div class="desc">เดินจากโรงแรม ~5 นาที · มิโสะราเมงสไตล์ฮอกไกโด ¥1,000–1,500 · มื้อแรกที่ดีที่สุดของทริป</div><a href="https://www.sapporo-ramen-alley.info/" class="act-url">🔗 Ramen Yokocho</a></div></li>
+    </ul>
+    <div class="overnight">🛏️ คืนนี้นอน: Hotel Livemax Sapporo Susukino</div>
+  </div>
+</div>
+</div>
+
+<!-- ═══ DAY 15 ═══ -->
+<div id="d15">
+<div class="day-card">
+  <div class="day-header">
+    <div class="day-num c-sap"><div class="dn">15</div><div class="dw">SUN</div><div class="mo">NOV</div></div>
+    <div class="day-info">
+      <h3>🏙️ Sapporo City Tour</h3>
+      <div class="dsub">เดินเที่ยวทั้งวัน ไม่ใช้รถ</div>
+      <div class="day-hotel">🏨 Hotel Livemax Sapporo Susukino</div>
+      <div class="day-tags"><span class="dtag">Sapporo</span><span class="dtag">ไม่ใช้รถ</span></div>
+    </div>
+  </div>
+  <div class="day-body">
+    <div class="tstrip ts-w">🚇 Sapporo Subway + เดินเท้า</div>
+    <ul class="acts">
+      <li class="act"><div class="at">07:30</div><div class="ac"><div class="name">🐟 Nijo Market (二条市場)</div><div class="desc">ตลาดเช้าซีฟู้ดสด · Ikura Don ¥1,500 · Kani Don ¥2,000 · เดินจากโรงแรม ~10 นาที</div><a href="https://www.sapporo-nijo.com/" class="act-url">🔗 Nijo Market</a></div></li>
+      <li class="act"><div class="at">09:30</div><div class="ac"><div class="name">🧱 Former Hokkaido Govt Office (Red Brick)</div><div class="desc">อาคารอิฐแดงสีสวย ถ่ายรูปสวย ฟรี</div><a href="https://www.pref.hokkaido.lg.jp/ss/nss/red-brick.html" class="act-url">🔗 Red Brick</a></div></li>
+      <li class="act"><div class="at">10:30</div><div class="ac"><div class="name">🌳 Odori Park + JR Tower T38</div><div class="desc">สวนกลางเมือง 1.5 กม. · วิว 360° จาก T38 ¥740</div></div></li>
+      <li class="act"><div class="at">14:00</div><div class="ac"><div class="name">🍪 Shiroi Koibito Park</div><div class="desc">โรงงานคุกกี้ชื่อดัง ¥800 · ลง Miyanosawa (Tozai Line)</div><a href="https://www.shiroikoibitopark.jp/en/" class="act-url">🔗 Shiroi Koibito Park</a></div></li>
+      <li class="act"><div class="at">17:00</div><div class="ac"><div class="name">🍺 Sapporo Beer Museum</div><div class="desc">ทัวร์ฟรี · Tasting set ¥1,000 · เบียร์สดในอาคารอิฐแดง</div><a href="https://www.sapporobeer.jp/brewery/s_museum/en/" class="act-url">🔗 Beer Museum</a></div></li>
+      <li class="act"><div class="at">20:00</div><div class="ac"><div class="name">🐑 Jingisukan (เนื้อแกะย่าง)</div><div class="desc"><strong>Daikoku (大黒)</strong> ใน Susukino ¥2,000–2,500 หรือ Soup Curry ที่ Garaku ¥1,500</div></div></li>
+    </ul>
+    <div class="overnight">🛏️ คืนนี้นอน: Hotel Livemax Sapporo Susukino</div>
+  </div>
+</div>
+</div>
+
+<!-- ═══ DAY 16 ═══ -->
+<div id="d16">
+<div class="day-card">
+  <div class="day-header">
+    <div class="day-num c-asa"><div class="dn">16</div><div class="dw">MON</div><div class="mo">NOV</div></div>
+    <div class="day-info">
+      <h3>🚗 Sapporo → Asahikawa</h3>
+      <div class="dsub">รับรถเช้า · สวนสัตว์โลก · สาเก · ยามค่ำซอยอิซากายะ</div>
+      <div class="day-hotel">🏨 Art Hotel Asahikawa</div>
+      <div class="day-tags"><span class="dtag o">🚗 ขับรถ วัน 1/3</span><span class="dtag g">Asahikawa</span><span class="dtag g">Zoo</span></div>
+    </div>
+  </div>
+  <div class="day-body">
+    <div class="tstrip ts-d">🚗 Nippon Rent-a-Car Susukino (รับ 08:00) → E5 เหนือ ~130 กม. ~1.5 ชม. → Asahikawa</div>
+    <ul class="acts">
+      <li class="act"><div class="at">08:00</div><div class="ac"><div class="name">🚗 รับรถ Nippon Rent-a-Car Susukino</div><div class="desc">Toyota Noah · ยืนยัน Winter Tires + ETC Card + CDW ก่อนออก</div></div></li>
+      <li class="act"><div class="at">09:30</div><div class="ac"><div class="name">🦒 Asahiyama Zoo (旭山動物園)</div><div class="desc">สวนสัตว์ดังที่สุดในญี่ปุ่น · เปิด 09:30 · ¥1,000/คน · ใช้เวลา 2.5–3 ชม.<br>ไฮไลท์: หมีขั้วโลก · แมวน้ำอุโมงค์ · นกเพนกวิน King</div><a href="https://www.city.asahikawa.hokkaido.jp/asahiyamazoo/en/" class="act-url">🔗 Asahiyama Zoo</a></div></li>
+      <li class="act"><div class="at">13:00</div><div class="ac"><div class="name">🍜 Asahikawa Ramen มื้อเที่ยง</div><div class="desc">โชยุ (น้ำใส) หรือมิโสะ + ไขมันหมูลอยหน้า รสเข้มข้นกลมกล่อม ¥900–1,200<br>· <strong>Hachiya (蜂屋)</strong> — ต้นตำรับ 70+ ปี<br>· <strong>Aoba (青葉)</strong> — ใกล้ Art Hotel เดินได้<br>· <strong>Baikouken (梅光軒)</strong> — โชยุสูตรคลาสสิก</div><a href="https://www.google.com/maps/search/Asahikawa+Ramen" class="act-url">🔗 แผนที่ร้านราเมง</a></div></li>
+      <li class="act"><div class="at">15:00</div><div class="ac"><div class="name">🍶 Otokoyama Sake Brewery Museum — ฟรีทั้งหมด!</div><div class="desc">โรงกลั่นสาเก 350 ปี · เข้าฟรี · ชิมสาเก 3 แก้วฟรี + พรีเมียม ¥200 ต่อแก้ว<br>VTR แนะนำมีภาษาไทย! · เปิด 09:00–17:00 · ห่างจากใจกลาง ~15 นาทีรถ</div><a href="https://www.otokoyama.com/museum/en/" class="act-url">🔗 Otokoyama Museum</a></div></li>
+      <li class="act"><div class="at">17:00</div><div class="ac"><div class="name">🏨 เช็คอิน Art Hotel Asahikawa</div><div class="desc">พักผ่อน อาบน้ำ แล้วออกไปยามค่ำ</div><a href="https://www.art-asahikawa.com/en/" class="act-url">🔗 Art Hotel Asahikawa</a></div></li>
+      <li class="act"><div class="at">19:00</div><div class="ac"><div class="name">🍻 Sanroku District (さんろく街) — ย่านอิซากายะคืนนี้</div><div class="desc">ย่านบันเทิงยามค่ำของ Asahikawa · อยู่ใกล้ Art Hotel เดินได้ · มีอิซากายะ ยากิโทริ เนื้อแกะ ร้านสาเก<br>· <strong>ลอง Hokkaido Wagyu</strong> หรือ <strong>หอยเชลล์ย่าง (Hotate)</strong> ¥2,000–3,500<br>· ถ้าอยากลองราเมงอีกแบบ แวะ <strong>Asahikawa Ramen Village</strong> (旭川ラーメン村)</div><a href="https://www.google.com/maps/place/Sanroku+street,+Asahikawa" class="act-url">🔗 Sanroku District</a></div></li>
+    </ul>
+    <div class="overnight">🛏️ คืนนี้นอน: Art Hotel Asahikawa</div>
+  </div>
+</div>
+</div>
+
+<!-- ═══ DAY 17 ═══ -->
+<div id="d17">
+<div class="day-card">
+  <div class="day-header">
+    <div class="day-num c-bei"><div class="dn">17</div><div class="dw">TUE</div><div class="mo">NOV</div></div>
+    <div class="day-info">
+      <h3>🚗 Asahikawa → Biei → Furano</h3>
+      <div class="dsub">ทุ่งเนิน · น้ำตก · บ่อน้ำสีฟ้า Illumination · Ningle Terrace (⚠️ ดูหมายเหตุ)</div>
+      <div class="day-hotel">🏨 Furano Powder Chalet</div>
+      <div class="day-tags"><span class="dtag o">🚗 ขับรถ วัน 2/3</span><span class="dtag">Biei</span><span class="dtag t">Blue Pond</span><span class="dtag">Furano</span></div>
+    </div>
+  </div>
+  <div class="day-body">
+    <div class="warn">⚠️ <strong>Ningle Terrace — อาจปิดวันที่ 17 พ.ย.</strong><br>
+    ตามรูปแบบทุกปี Ningle Terrace ปิดซ่อมบำรุงช่วงกลาง–ปลาย พ.ย. ก่อนเปิดฤดูสกี (มักเปิดอีกครั้ง ~22–29 พ.ย.) &nbsp;→&nbsp; <strong>เช็คอีกครั้งก่อนเดินทาง 2–3 สัปดาห์</strong> ที่ <a href="https://www.furanotourism.com/en/">furanotourism.com</a> &nbsp;|&nbsp; ถ้าปิด: ใช้เวลาเพิ่มที่ Blue Pond Illumination แทน</div>
+    <div class="tstrip ts-d">🚗 Asahikawa → Biei: Route 237 ใต้ ~35 กม. 35 นาที | Biei → Furano: Route 237 ~30 กม. 30 นาที | ถนนฟรีตลอด</div>
+    <ul class="acts">
+      <li class="act"><div class="at">08:30</div><div class="ac"><div class="name">🚗 ออกจาก Asahikawa → Biei</div><div class="desc">ออกเช้าให้มีเวลาเต็มวัน Route 237 ลงใต้</div></div></li>
+      <li class="act"><div class="at">09:15</div><div class="ac"><div class="name">🌾 Patchwork Road (パッチワークの路)</div><div class="desc">ขับชมทุ่งเกษตรเนินสลับสีเหมือนผ้าเย็บ · วิว Daisetsuzan ในฉากหลัง<br>📸 Stop แนะนำ: <strong>Ken &amp; Mary Tree</strong> · <strong>Seven Stars Tree</strong></div><a href="https://www.biei-hokkaido.jp/en/sightseeing/patchwork-road/" class="act-url">🔗 Patchwork Road Guide</a></div></li>
+      <li class="act"><div class="at">10:45</div><div class="ac"><div class="name">💧 Shirahige Waterfall (白ひげの滝)</div><div class="desc">น้ำตกสีฟ้าโคบอลต์ไหลลงแม่น้ำ Biei · ดูจากสะพาน 2 นาที · ฟรี</div></div></li>
+      <li class="act"><div class="at">11:30</div><div class="ac"><div class="name">🍱 มื้อเที่ยงแถว Shirogane</div><div class="desc">Café Shirogane หรือร้านอาหารใกล้ Blue Pond ¥1,000–1,500</div></div></li>
+      <li class="act"><div class="at">13:00</div><div class="ac"><div class="name">🔵 Shirogane Blue Pond (青い池) ⭐⭐</div><div class="desc">บ่อน้ำสีฟ้าลึกลับ ต้นไม้ยืนตาย · ค่าจอดรถ ¥200 · เดินรอบบ่อ ~45 นาที<br><strong>แผน 4 ชั่วโมง:</strong> ดูกลางวัน 13:00 → เดินเสร็จ 13:45 → พักในรถ/café → รอ Dusk 15:30 → Illumination เริ่ม 16:00–16:30 → ออก 17:00<br>→ <strong>4 ชั่วโมงเหมาะมาก ไม่นานเกิน!</strong> เพราะรอ Illumination ตอนมืด</div><a href="https://www.biei-hokkaido.jp/en/sightseeing/shirogane-blue-pond/" class="act-url">🔗 Blue Pond Official</a></div></li>
+      <li class="act"><div class="at">17:00</div><div class="ac"><div class="name">🚗 ขับต่อ Furano ~40 นาที · เช็คอิน Furano Powder Chalet</div><div class="desc">⚠️ ร้านอาหารแถวสกีรีสอร์ตยังไม่เปิด (ลานสกีเปิด 29 พ.ย.) → ขับลงตัวเมือง Furano ~10 นาที</div></div></li>
+      <li class="act"><div class="at">19:00</div><div class="ac"><div class="name">🧀 อาหารค่ำในเมือง Furano</div><div class="desc">· <strong>Furano Marche</strong> — ร้านอาหารท้องถิ่น ผักและเนื้อ Furano ¥1,500–2,000<br>· <strong>ซื้อ Furano Cheese + ไส้กรอก</strong> ทำเองที่ Chalet ถ้ามีครัว<br>· <strong>Furano Winery</strong> (ปิดประมาณ 17:00) แวะก่อนกลับหรือซื้อกลับมาดื่ม</div><a href="https://www.furanowine.jp/en/" class="act-url">🔗 Furano Winery</a></div></li>
+    </ul>
+    <div class="overnight">🛏️ คืนนี้นอน: Furano Powder Chalet</div>
+  </div>
+</div>
+</div>
+
+<!-- ═══ DAY 18 ═══ -->
+<div id="d18">
+<div class="day-card">
+  <div class="day-header">
+    <div class="day-num c-d18"><div class="dn">18</div><div class="dw">WED</div><div class="mo">NOV</div></div>
+    <div class="day-info">
+      <h3>🚗 Furano → Noboribetsu → Sapporo (คืนรถ)</h3>
+      <div class="dsub">✅ ยืนยัน Option A · Hell Valley · ไอน้ำภูเขาไฟ · แช่เท้า</div>
+      <div class="day-hotel">🏨 La'gent Stay Sapporo Odori Hokkaido</div>
+      <div class="day-tags"><span class="dtag o">🚗 ขับรถ วัน 3/3</span><span class="dtag r">คืนรถ Susukino</span><span class="dtag">Noboribetsu</span></div>
+    </div>
+  </div>
+  <div class="day-body">
+    <div class="tstrip ts-d">🚗 ออก Furano 08:00 → Route 38 ตะวันตก → Tomamu IC (E38) → E5 ใต้ → Noboribetsu IC → 10:15 ถึง</div>
+    <ul class="acts">
+      <li class="act"><div class="at">08:00</div><div class="ac"><div class="name">🚗 ออกจาก Furano ทาง Route 38 ตะวันตก</div><div class="desc">Route 38 → Tomamu IC เข้าทางด่วน E38 → ต่อ E5 ใต้ → รวม ~2 ชม.</div></div></li>
+      <li class="act"><div class="at">10:15</div><div class="ac"><div class="name">🌋 Noboribetsu Jigokudani — Hell Valley</div><div class="desc">หุบเขาภูเขาไฟ 450 ม. · ไอกำมะถันพุ่งทั่วหุบ · เดินตามทางไม้ ~1 ชม. · ฟรี (จอดรถ ¥500)<br>📍 เส้นทางเดิน: ลานจอด → Jigokudani → Oyunuma → กลับ ~1.5–2 กม.</div><a href="https://noboribetsu-spa.jp/en/guide/jigokudani/" class="act-url">🔗 Noboribetsu Tourism</a></div></li>
+      <li class="act"><div class="at">10:30</div><div class="ac"><div class="name">♨️ Foot Bath (ยudeyu) — ฟรี!</div><div class="desc">แช่เท้าในน้ำพุร้อนกำมะถัน ริมทางเดินป่า · เตรียมผ้าเช็ดเท้าไปด้วย<br>อุณหภูมิ ~40–45°C · ในอากาศหนาว 5°C สบายมากๆ</div></div></li>
+      <li class="act"><div class="at">12:00</div><div class="ac"><div class="name">🍱 มื้อเที่ยง Noboribetsu — อาหารท้องถิ่น</div><div class="desc"><strong>🦀 Jigoku Mushi (地獄蒸し)</strong> — ไฮไลท์ที่สุด! นึ่งอาหารด้วยไอน้ำภูเขาไฟ ปู ข้าวโพด ไข่ ¥500–1,500<br>ที่ <strong>Yukku Hiroba (ゆっくり広場)</strong> ซื้อวัตถุดิบแล้วนึ่งเอง<br>หรือร้าน <strong>Ebisu-ya</strong> แถวถนน Onsen ¥1,500–2,000<br>· อาหาร Oni (ปีศาจ) theme ของที่ระลึกและขนม Noboribetsu</div></div></li>
+      <li class="act"><div class="at">14:00</div><div class="ac"><div class="name">🚗 ขับกลับ Sapporo ทาง E5 เหนือ ~88 กม. ~1 ชม.</div><div class="desc">เข้าเมือง Sapporo → คืนรถ Nippon Susukino ~15:30</div></div></li>
+      <li class="act"><div class="at">15:30</div><div class="ac"><div class="name">🚗 คืนรถ Nippon Rent-a-Car Susukino</div><div class="desc">จากนั้นเดิน/taxi ~15 นาที ถึง La'gent Stay Sapporo Odori · เช็คอิน</div><a href="https://www.lagent.jp/sapporo-odori/" class="act-url">🔗 La'gent Stay Sapporo Odori</a></div></li>
+      <li class="act"><div class="at">19:00</div><div class="ac"><div class="name">🦀 มื้อค่ำพิเศษ — ปูคืนนี้!</div><div class="desc">คืนแรกกลับ Sapporo หลังขับรถ 3 วัน เหมาะสุดสำหรับ splurge<br>· <strong>Kani Honke (蟹本家)</strong> — พรีเมียม ¥8,000–15,000/คน<br>· <strong>Kani Shogun (蟹将軍)</strong> — บัฟเฟ่ต์ปู ¥5,000–8,000/คน<br>· <strong>Nijo Market ตลาดค่ำ</strong> — ซื้อปูต้มกินเอง ¥3,000–5,000/คน ถูกสุด</div></div></li>
+    </ul>
+    <div class="overnight">🛏️ คืนนี้นอน: La'gent Stay Sapporo Odori Hokkaido</div>
+  </div>
+</div>
+</div>
+
+<!-- ═══ DAY 19 ═══ -->
+<div id="d19">
+<div class="day-card">
+  <div class="day-header">
+    <div class="day-num c-ota"><div class="dn">19</div><div class="dw">THU</div><div class="mo">NOV</div></div>
+    <div class="day-info">
+      <h3>🚃 Sapporo → Otaru (รถไฟ)</h3>
+      <div class="dsub">เดินจากโรงแรม → สถานี → รถไฟ → คลอง → ซูชิ → LeTAO</div>
+      <div class="day-hotel">🏨 La'gent Stay Sapporo Odori Hokkaido</div>
+      <div class="day-tags"><span class="dtag t">Otaru Canal</span><span class="dtag t">🍣 Sushi</span><span class="dtag t">LeTAO</span><span class="dtag">ไม่ใช้รถ</span></div>
+    </div>
+  </div>
+  <div class="day-body">
+    <div class="note">🚶 <strong>จากโรงแรมถึงสถานีรถไฟ:</strong> La'gent Stay Sapporo Odori → เดิน ~10–12 นาที ไป <strong>JR Sapporo Station</strong> ตรง (Route: ออกโรงแรม → เดินเหนือตาม Kita Ichijo → เลี้ยวขวา → ถึงสถานี) หรือ Taxi ¥700–900 (5 นาที)</div>
+    <div class="note">🎟️ <strong>ต้องจองตั๋วล่วงหน้าไหม? — ไม่ต้องเลยครับ!</strong> JR Sapporo→Otaru เป็นรถไฟท้องถิ่นสาย Hakodate Main Line ออกทุก 15–30 นาที ซื้อตั๋วที่เครื่องหน้า Platform หรือแตะ IC Card ได้เลย ที่นั่งไม่ reserved นั่งที่ว่าง</div>
+    <div class="tstrip ts-t">🚃 JR Rapid สาย Hakodate Main Line: Sapporo → Otaru · 33 นาที · ¥750 · Platform 3–4 ที่ Sapporo Station</div>
+    <ul class="acts">
+      <li class="act"><div class="at">09:15</div><div class="ac"><div class="name">🚶 เดินจากโรงแรม → JR Sapporo Station</div><div class="desc">ระยะทาง ~900 ม. เดิน ~12 นาที หรือ taxi ¥700</div></div></li>
+      <li class="act"><div class="at">09:30</div><div class="ac"><div class="name">🚃 ขึ้นรถไฟ JR → Otaru (33 นาที)</div><div class="desc">ซื้อตั๋ว ¥750 ที่เครื่อง หรือแตะ IC Card · ลงสถานี JR Otaru</div></div></li>
+      <li class="act"><div class="at">10:05</div><div class="ac"><div class="name">🌊 Otaru Canal (小樽運河)</div><div class="desc">เดินจากสถานี ~10 นาที · คลองอิฐแดงสร้างปี 1923 · เดินชมฟรี<br>📸 จุดดีที่สุด: บนสะพาน Chuo-bashi หันหน้าไปทางโกดัง</div><a href="https://otaru.gr.jp/en/" class="act-url">🔗 Otaru Tourism</a></div></li>
+      <li class="act"><div class="at">11:30</div><div class="ac"><div class="name">🍣 ซูชิมื้อเที่ยง — ไฮไลท์อาหารของทั้งทริป!</div><div class="desc">· <strong>Masazushi (政寿司)</strong> — ระดับ top ¥5,000–10,000 จองล่วงหน้า<br>· <strong>Sushiya Yoshida</strong> — คุณภาพดี ¥3,000–6,000<br>· <strong>Kaiten Hanamaru</strong> — สายพาน ¥2,000–3,500 ไม่ต้องจอง<br><strong>ต้องชิม:</strong> 🦀 Kegani (ปูขน) · 🐚 Hotate (หอยเชลล์สด) · 🦔 Uni (ซีอัร์ชิน)</div><a href="https://otaru.gr.jp/en/gourmet/" class="act-url">🔗 Otaru Sushi Guide</a></div></li>
+      <li class="act"><div class="at">13:30</div><div class="ac"><div class="name">🏮 Sakaimachi Street (堺町通り)</div><div class="desc">ถนนช้อป ~1 กม. · Kitaichi Glass · ครีม Otaru MP · ของฝาก<br>🍰 <strong>LeTAO Patisserie</strong> — Double Fromage Cheesecake ¥700 ต้องกิน!</div><a href="https://letao.jp/en/" class="act-url">🔗 LeTAO Official</a></div></li>
+      <li class="act"><div class="at">16:00</div><div class="ac"><div class="name">🌅 Otaru Canal ยามเย็น (ไฟติด ~17:00)</div><div class="desc">บรรยากาศโรแมนติก ไฟส่องริมคลองในอากาศหนาว</div></div></li>
+      <li class="act"><div class="at">18:30</div><div class="ac"><div class="name">🚃 JR กลับ Sapporo (33 นาที)</div><div class="desc">ถึง Sapporo Station → เดิน/taxi กลับ La'gent Stay</div></div></li>
+    </ul>
+    <div class="overnight">🛏️ คืนนี้นอน: La'gent Stay Sapporo Odori Hokkaido (คืนสุดท้ายก่อนบิน)</div>
+  </div>
+</div>
+</div>
+
+<!-- ═══ DAY 20 ═══ -->
+<div id="d20">
+<div class="day-card">
+  <div class="day-header">
+    <div class="day-num c-fly"><div class="dn">20</div><div class="dw">FRI</div><div class="mo">NOV</div></div>
+    <div class="day-info">
+      <h3>✈️ กลับบ้าน</h3>
+      <div class="dsub">La'gent Stay Odori → JR Sapporo → New Chitose → บิน</div>
+      <div class="day-tags"><span class="dtag">New Chitose Airport</span><span class="dtag r">Fly Home</span></div>
+    </div>
+  </div>
+  <div class="day-body">
+    <div class="tstrip ts-d">🚌 La'gent Stay Odori → เดิน ~450 ม. → ป้าย Susukino (Minami 4, Nishi 3) → รถบัส ~65 นาที → CTS · หรือ 🚃 JR จาก Sapporo Station (37 นาที)</div>
+    <ul class="acts">
+      <li class="act"><div class="at">09:30</div><div class="ac"><div class="name">☕ อาหารเช้า + ช้อปย่านโรงแรม</div><div class="desc">Tanukikoji ตรงข้ามโรงแรม · Family Mart ในตึกโรงแรม · ซื้อของฝากหลักที่สนามบินดีกว่า</div></div></li>
+      <li class="act"><div class="at">10:30</div><div class="ac"><div class="name">🧳 Checkout La'gent Stay Sapporo Odori</div><div class="desc">ฝากกระเป๋าที่ Front desk ถ้าต้องการออกก่อน · Checkout ปกติ 11:00</div></div></li>
+      <li class="act"><div class="at">10:40</div><div class="ac"><div class="name">🚌 เดิน ~450 ม. → ป้ายรถบัส Susukino (Minami 4, Nishi 3)</div><div class="desc">เลี้ยวออกโรงแรม → เดินใต้ Tanukikoji → ขึ้นเหนือเล็กน้อย → ป้ายบัส ~6 นาที</div><a href="https://www.hokto.co.jp/en/sapporo-chitose/" class="act-url">🔗 ตารางเวลาบัส</a></div></li>
+      <li class="act"><div class="at">11:00</div><div class="ac"><div class="name">🚌 ขึ้นรถบัส → New Chitose Airport</div><div class="desc">กระเป๋า 4 ใบใส่ท้ายรถ · นั่งสบาย ~65 นาที · จ่ายบนรถ ¥1,500</div></div></li>
+      <li class="act"><div class="at">12:05</div><div class="ac"><div class="name">✈️ ถึง New Chitose Airport — เช็คอิน HX691</div><div class="desc">Check-in counter เปิด · โหลดกระเป๋า · ผ่าน ตม. ขาออก · มีเวลาช้อปของฝาก ~3 ชม.</div></div></li>
+      <li class="act"><div class="at">12:30</div><div class="ac"><div class="name">🛍️ ช้อปของฝากในสนามบิน (เวลา ~2.5 ชม.)</div><div class="desc">· 🍫 <strong>Royce' Chocolate</strong> — ต้องซื้อ ช็อกโกแลตแผ่นบางละลายในปาก<br>· 🍪 <strong>Shiroi Koibito</strong> — คุกกี้ไวท์ช็อกโกแลต ของฝากขึ้นชื่อ<br>· 🎂 <strong>LeTAO Double Fromage</strong> — มีขายที่สนามบิน<br>· 🧈 <strong>Hokkaido Butter / Dairy · Rokkatei</strong></div></div></li>
+      <li class="act"><div class="at">15:20</div><div class="ac"><div class="name">✈️ HX691 ออกจาก New Chitose — สวัสดีบ้าน!</div><div class="desc">กลับบ้านพร้อมความทรงจำ 7 วันที่ฮอกไกโด ❄️</div></div></li>
+    </ul>
+  </div>
+</div>
+</div>
+
+<hr class="snow">
+
+<!-- ═══ FOOD GUIDE ═══ -->
+<div id="food">
+<div class="sec-head">
+  <div class="sec-icon" style="background:#fff8ed">🍽️</div>
+  <h2>คู่มืออาหาร — Must Eat สำหรับคนไทย</h2>
+</div>
+
+<div class="food-grid">
+  <div class="food-card">
+    <span class="emoji">🦀</span>
+    <div class="fn">ปูฮอกไกโด (Kani)</div>
+    <div class="frest">Snow Crab · King Crab · Kegani (ปูขน)<br>วันที่ 18 ค่ำ (Sapporo) / วันที่ 19 (Otaru)</div>
+    <div class="fprice">¥5,000–15,000/คน</div>
+  </div>
+  <div class="food-card">
+    <span class="emoji">🍜</span>
+    <div class="fn">ราเมงฮอกไกโด</div>
+    <div class="frest">Sapporo Miso · Asahikawa Shoyu<br>วันที่ 14 (Ramen Yokocho) · วันที่ 16 (Hachiya/Aoba)</div>
+    <div class="fprice">¥900–1,500/คน</div>
+  </div>
+  <div class="food-card">
+    <span class="emoji">🍛</span>
+    <div class="fn">Soup Curry — คนไทยชอบมากที่สุด</div>
+    <div class="frest">คล้ายแกงไทยมาก Garaku / Lavi / SAMURAI<br>วันที่ 15 (Sapporo)</div>
+    <div class="fprice">¥1,300–1,800/คน</div>
+  </div>
+  <div class="food-card">
+    <span class="emoji">🍣</span>
+    <div class="fn">ซูชิ Otaru</div>
+    <div class="frest">Uni · Hotate · Kegani · Ikura<br>วันที่ 19 (Otaru) — ไฮไลท์ทั้งทริป</div>
+    <div class="fprice">¥2,000–8,000/คน</div>
+  </div>
+  <div class="food-card">
+    <span class="emoji">🐑</span>
+    <div class="fn">Jingisukan (เนื้อแกะย่าง)</div>
+    <div class="frest">อาหารขึ้นชื่อ Hokkaido · Daikoku Susukino<br>วันที่ 15 (Sapporo)</div>
+    <div class="fprice">¥2,000–3,000/คน</div>
+  </div>
+  <div class="food-card">
+    <span class="emoji">🌋</span>
+    <div class="fn">Jigoku Mushi (นึ่งไอภูเขาไฟ)</div>
+    <div class="frest">ประสบการณ์พิเศษ Noboribetsu<br>ปู+ข้าวโพด+ไข่นึ่งไอกำมะถัน วันที่ 18</div>
+    <div class="fprice">¥500–1,500/เซ็ต</div>
+  </div>
+  <div class="food-card">
+    <span class="emoji">🍦</span>
+    <div class="fn">Soft Cream · Dairy Hokkaido</div>
+    <div class="frest">ไอศกรีมนม Hokkaido ลองกินกลางอากาศหนาว!<br>ทุกวัน ทุกที่ในฮอกไกโด</div>
+    <div class="fprice">¥350–500/ถ้วย</div>
+  </div>
+  <div class="food-card">
+    <span class="emoji">🎂</span>
+    <div class="fn">LeTAO Double Fromage</div>
+    <div class="frest">Cheesecake ชื่อดังที่สุดของ Otaru<br>วันที่ 19 (Otaru) + ซื้อกลับที่สนามบิน</div>
+    <div class="fprice">¥700/ชิ้น · ¥2,000+/กล่อง</div>
+  </div>
+</div>
+</div>
+
+<hr class="snow">
+
+<!-- ═══ LINKS ═══ -->
+<div id="links">
+<div class="sec-head">
+  <div class="sec-icon" style="background:#edfaf8">🔗</div>
+  <h2>ลิงก์สำคัญทั้งหมด</h2>
+</div>
+
+<table class="links-table">
+  <tr><th>หมวด</th><th>ชื่อ</th><th>URL</th></tr>
+  <tr><td>🚌 รถบัส</td><td>Hokuto Kotsu (สายตรง Sapporo↔CTS)</td><td><a href="https://www.hokto.co.jp/en/sapporo-chitose/">hokto.co.jp/en/sapporo-chitose</a></td></tr>
+  <tr><td>🚌 รถบัส</td><td>Hokkaido Chuo Bus Airport Liner</td><td><a href="https://www.chuo-bus.co.jp/airport.en/">chuo-bus.co.jp/airport.en</a></td></tr>
+  <tr><td>✈️ เที่ยวบิน</td><td>XJ620 (ขาไป) ถึง CTS 10:40</td><td>Thai AirAsia X · ตรวจสอบ <a href="https://www.airasia.com/">airasia.com</a></td></tr>
+  <tr><td>✈️ เที่ยวบิน</td><td>HX691 (ขากลับ) ออก 15:20</td><td>Hong Kong Airlines · ตรวจสอบ <a href="https://www.hongkongairlines.com/">hongkongairlines.com</a></td></tr>
+  <tr><td>✈️ สนามบิน</td><td>New Chitose Airport</td><td><a href="https://www.new-chitose-airport.jp/en/">new-chitose-airport.jp/en</a></td></tr>
+  <tr><td>🚃 รถไฟ</td><td>JR Hokkaido (ภาษาไทย)</td><td><a href="https://www.jrhokkaido.co.jp/global/thai/">jrhokkaido.co.jp/global/thai</a></td></tr>
+  <tr><td>🚗 รถเช่า</td><td>Nippon Rent-a-Car</td><td><a href="https://www.nipponrentacar.co.jp/english/">nipponrentacar.co.jp/english</a></td></tr>
+  <tr><td>🏨 โรงแรม</td><td>Hotel Livemax Sapporo Susukino</td><td><a href="https://www.livemax.co.jp/en/hotel/hotel-livemax-sapporo-susukino/">livemax.co.jp</a></td></tr>
+  <tr><td>🏨 โรงแรม</td><td>Art Hotel Asahikawa</td><td><a href="https://www.art-asahikawa.com/en/">art-asahikawa.com/en</a></td></tr>
+  <tr><td>🏨 โรงแรม</td><td>La'gent Stay Sapporo Odori</td><td><a href="https://www.lagent.jp/sapporo-odori/">lagent.jp/sapporo-odori</a></td></tr>
+  <tr><td>🦒 สวนสัตว์</td><td>Asahiyama Zoo</td><td><a href="https://www.city.asahikawa.hokkaido.jp/asahiyamazoo/en/">city.asahikawa.hokkaido.jp</a></td></tr>
+  <tr><td>🍶 สาเก</td><td>Otokoyama Sake Museum</td><td><a href="https://www.otokoyama.com/museum/en/">otokoyama.com/museum/en</a></td></tr>
+  <tr><td>🌾 Biei</td><td>Patchwork Road Guide</td><td><a href="https://www.biei-hokkaido.jp/en/sightseeing/patchwork-road/">biei-hokkaido.jp/en</a></td></tr>
+  <tr><td>🔵 Biei</td><td>Shirogane Blue Pond</td><td><a href="https://www.biei-hokkaido.jp/en/sightseeing/shirogane-blue-pond/">biei-hokkaido.jp/en</a></td></tr>
+  <tr><td>🍷 Furano</td><td>Furano Winery</td><td><a href="https://www.furanowine.jp/en/">furanowine.jp/en</a></td></tr>
+  <tr><td>🏪 Furano</td><td>Ningle Terrace (ตรวจเปิด/ปิด)</td><td><a href="https://www.furanotourism.com/en/spot/spot_D.php?id=2&kid3=26">furanotourism.com</a></td></tr>
+  <tr><td>🌋 Noboribetsu</td><td>Noboribetsu Tourism</td><td><a href="https://noboribetsu-spa.jp/en/">noboribetsu-spa.jp/en</a></td></tr>
+  <tr><td>🌋 Noboribetsu</td><td>Jigokudani Hell Valley</td><td><a href="https://noboribetsu-spa.jp/en/guide/jigokudani/">noboribetsu-spa.jp/en/guide</a></td></tr>
+  <tr><td>🌊 Otaru</td><td>Otaru Tourism</td><td><a href="https://otaru.gr.jp/en/">otaru.gr.jp/en</a></td></tr>
+  <tr><td>🎂 ขนม</td><td>LeTAO Patisserie</td><td><a href="https://letao.jp/en/">letao.jp/en</a></td></tr>
+  <tr><td>🍪 ของฝาก</td><td>Shiroi Koibito Park</td><td><a href="https://www.shiroikoibitopark.jp/en/">shiroikoibitopark.jp/en</a></td></tr>
+  <tr><td>🍜 ราเมง</td><td>Sapporo Ramen Yokocho</td><td><a href="https://www.sapporo-ramen-alley.info/">sapporo-ramen-alley.info</a></td></tr>
+  <tr><td>📍 แผนที่</td><td>Google Maps — Asahikawa Ramen</td><td><a href="https://www.google.com/maps/search/Asahikawa+Ramen">google.com/maps</a></td></tr>
+</table>
+
+<div class="note" style="margin-top:16px">📌 <strong>แชร์ลิงก์นี้ให้เพื่อนร่วมทริปได้เลย</strong> — เปิดไฟล์ HTML นี้บนมือถือหรือคอมพิวเตอร์ ใช้เมนูด้านบนเพื่อข้ามไปแต่ละวันได้สะดวก</div>
+</div>
+
+</div><!-- /wrap -->
+</body>
+</html>
