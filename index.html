@@ -140,36 +140,6 @@ a{color:var(--blue);text-decoration:none}a:hover{text-decoration:underline}
 }
 
 hr.snow{border:none;border-top:1px dashed var(--border);margin:20px 0}
-/* DINNER TABS (Day 15) */
-.dinner-label{font-size:13px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.7px;margin:14px 0 8px;display:flex;align-items:center;gap:8px}
-.dinner-label::after{content:'';flex:1;height:1px;background:var(--border)}
-.dinner-tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px}
-.dtab{padding:7px 14px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;border:2px solid var(--border);background:#f5f5f5;color:#666;transition:all .15s}
-.dtab:hover{background:#eee}
-.dtab.da{background:#fff8ed;border-color:var(--amber);color:var(--amber)}
-.dtab.db{background:var(--blue-light);border-color:var(--blue);color:#1a5a82}
-.dtab.dc{background:#fdf0ee;border-color:var(--red);color:#a00}
-.dtab.dd{background:var(--green-light);border-color:var(--green);color:var(--green)}
-.dtab.de{background:var(--purple-light);border-color:var(--purple);color:var(--purple)}
-.dpane{display:none;background:#fafaf8;border-radius:10px;padding:13px 15px;border:1px solid var(--border)}
-.dpane.show{display:block}
-.dpane .dname{font-size:16px;font-weight:700;color:var(--navy);margin-bottom:5px}
-.dpane .ddesc{font-size:14.5px;color:var(--muted);line-height:1.6;margin-bottom:8px}
-.dpane .dmeta{display:flex;gap:10px;flex-wrap:wrap;font-size:13px;margin-top:6px}
-.dmeta-i{background:#fff;border:1px solid var(--border);border-radius:8px;padding:4px 10px;color:var(--text)}
-.dmeta-i strong{color:var(--navy)}
-
-/* SAFETY SECTION */
-.safety-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0}
-.safety-card{background:#fff;border-radius:12px;padding:16px 18px;border-left:4px solid var(--green)}
-.safety-card.warn-card{border-left-color:var(--amber)}
-.safety-card h4{font-size:13px;font-weight:700;color:var(--navy);margin-bottom:8px;text-transform:uppercase;letter-spacing:.5px}
-.safety-card ul{list-style:none;display:flex;flex-direction:column;gap:5px}
-.safety-card li{font-size:14.5px;color:var(--text);padding-left:20px;position:relative;line-height:1.5}
-.safety-card li::before{content:'•';position:absolute;left:0;color:var(--green);font-weight:700}
-.safety-card.warn-card li::before{color:var(--amber)}
-@media(max-width:600px){.safety-grid,.dinner-tabs{grid-template-columns:1fr}.dtab{font-size:12px;padding:6px 10px}}
-
 </style>
 </head>
 <body>
@@ -185,7 +155,6 @@ hr.snow{border:none;border-top:1px dashed var(--border);margin:20px 0}
   <a href="#d18">18 พ.ย.</a>
   <a href="#d19">19 พ.ย.</a>
   <a href="#d20">20 พ.ย.</a>
-  <a href="#safety">🛒 เตรียมอาหาร</a>
   <a href="#food">อาหาร</a>
   <a href="#links">ลิงก์</a>
 </nav>
@@ -431,83 +400,7 @@ hr.snow{border:none;border-top:1px dashed var(--border);margin:20px 0}
       <li class="act"><div class="at">10:30</div><div class="ac"><div class="name">🌳 Odori Park + JR Tower T38</div><div class="desc">สวนกลางเมือง 1.5 กม. · วิว 360° จาก T38 ¥740</div></div></li>
       <li class="act"><div class="at">14:00</div><div class="ac"><div class="name">🍪 Shiroi Koibito Park</div><div class="desc">โรงงานคุกกี้ชื่อดัง ¥800 · ลง Miyanosawa (Tozai Line)</div><a href="https://www.shiroikoibitopark.jp/en/" class="act-url">🔗 Shiroi Koibito Park</a></div></li>
       <li class="act"><div class="at">17:00</div><div class="ac"><div class="name">🍺 Sapporo Beer Museum</div><div class="desc">ทัวร์ฟรี · Tasting set ¥1,000 · เบียร์สดในอาคารอิฐแดง</div><a href="https://www.sapporobeer.jp/brewery/s_museum/en/" class="act-url">🔗 Beer Museum</a></div></li>
-      <li class="act">
-        <div class="at">20:00</div>
-        <div class="ac" style="width:100%">
-          <div class="dinner-label">🍽️ ทางเลือกมื้อเย็น — เลือก 1 จาก 5 ร้าน</div>
-          <div class="dinner-tabs">
-            <button class="dtab da" onclick="showDinner('a',this)">🐑 A · Jingisukan</button>
-            <button class="dtab" onclick="showDinner('b',this)">🐟 B · Hachikyo</button>
-            <button class="dtab" onclick="showDinner('c',this)">🦀 C · KANIZA</button>
-            <button class="dtab" onclick="showDinner('d',this)">🍛 D · Soup Curry</button>
-            <button class="dtab" onclick="showDinner('e',this)">🦑 E · Izakaya Saburo</button>
-          </div>
-
-          <div class="dpane show" id="dd-a">
-            <div class="dname">🐑 Jingisukan — เนื้อแกะย่างสไตล์ฮอกไกโด</div>
-            <div class="ddesc">อาหารขึ้นชื่อที่สุดของฮอกไกโด ย่างบนกระทะนูนพิเศษ กินกับผักและดื่มเบียร์ Sapporo<br>
-            <strong>Daikoku (大黒)</strong> — ร้านเก่าแก่ใน Susukino ¥2,000–2,500/คน เดินจากโรงแรม ~5 นาที<br>
-            <strong>YUHI (夕陽)</strong> ⭐4.7 — salt-aged premium ¥4,000–6,500/คน ชั้น 10 Minami 4-jo · จองล่วงหน้า</div>
-            <div class="dmeta">
-              <span class="dmeta-i">🕔 <strong>17:00</strong>–สาย</span>
-              <span class="dmeta-i">💴 ¥2,000–6,500/คน</span>
-              <span class="dmeta-i">📍 Susukino</span>
-              <span class="dmeta-i">⚠️ YUHI ควรจองก่อน</span>
-            </div>
-            <div style="margin-top:8px"><a href="https://www.jingisukanyuuhi.com/" class="act-url">🔗 YUHI (⭐4.7)</a>&nbsp;<a href="https://sapporo-jingisukan.info/" class="act-url">🔗 Daruma</a></div>
-          </div>
-
-          <div class="dpane" id="dd-b">
-            <div class="dname">🐟 Umi Hachikyo (海味はちきょう) — ไข่แซลมอนล้นชาม!</div>
-            <div class="ddesc">ไฮไลท์คือ <strong>Ikura Don</strong> — พนักงานตะโกน "おいさ！おいさ！" พร้อมตักไข่แซลมอนใส่ชามข้าวจนล้น<br>ซาซิมิ ปูขน หอยเชลล์สด Hokkaido บรรยากาศสนุกมาก เป็น moment ที่กลุ่มชอบถ่ายรูปพร้อมกัน</div>
-            <div class="dmeta">
-              <span class="dmeta-i">⭐ <strong>4.2</strong> (1,775 รีวิว)</span>
-              <span class="dmeta-i">🕔 <strong>18:00</strong>–23:00</span>
-              <span class="dmeta-i">💴 ¥3,000–5,000/คน</span>
-              <span class="dmeta-i">📍 Minami 3-jo Nishi 3</span>
-              <span class="dmeta-i">⚠️ คิวพอสมควร ไปก่อน 18:00</span>
-            </div>
-            <div style="margin-top:8px"><a href="https://www.hachikyo.com/ja/" class="act-url">🔗 Hachikyo Official</a>&nbsp;<a href="https://maps.app.goo.gl/hachikyo" class="act-url">🔗 Google Maps</a></div>
-          </div>
-
-          <div class="dpane" id="dd-c">
-            <div class="dname">🦀 KANIZA (蟹座) — บุฟเฟ่ต์ King Crab กินไม่อั้น!</div>
-            <div class="ddesc">All-you-can-eat <strong>King Crab สด</strong> + salad bar + sauce station · มีตัวเลือก Wagyu beef เพิ่ม<br>Rating 4.5 สูงมากสำหรับบุฟเฟ่ต์ · เหมาะถ้าอยากกินปูอย่างจุใจโดยไม่กังวลเรื่องราคารายจาน</div>
-            <div class="dmeta">
-              <span class="dmeta-i">⭐ <strong>4.5</strong> (471 รีวิว)</span>
-              <span class="dmeta-i">🕔 <strong>17:00</strong>–22:30</span>
-              <span class="dmeta-i">💴 ¥12,000–13,000/คน</span>
-              <span class="dmeta-i">📍 Minami 4-jo Nishi 2 ชั้น 9</span>
-              <span class="dmeta-i">📌 จองผ่าน Google Maps</span>
-            </div>
-            <div style="margin-top:8px"><a href="https://kani-za.com/" class="act-url">🔗 KANIZA Official</a></div>
-          </div>
-
-          <div class="dpane" id="dd-d">
-            <div class="dname">🍛 Soup Curry GARAKU — ประหยัด อิ่ม อร่อยที่สุด</div>
-            <div class="ddesc">ร้านดัง Soup Curry สาขาหลัก Sapporo · ไก่ตุ๋นนุ่มหลุดกระดูก ผักทอดกรอบ ปรับระดับเผ็ดได้<br>คนไทยที่ไปรีวิวบอกว่ากินได้ไม่หยุด · คล้ายแกงไทยมากที่สุด ราคาคุ้มที่สุดในบรรดาทั้งหมด</div>
-            <div class="dmeta">
-              <span class="dmeta-i">⭐ <strong>4.3</strong> (5,207 รีวิว)</span>
-              <span class="dmeta-i">🕔 <strong>17:00</strong>–20:30 เท่านั้น!</span>
-              <span class="dmeta-i">💴 ¥1,400–2,000/คน</span>
-              <span class="dmeta-i">📍 Minami 3-jo Higashi 2 · B1F</span>
-              <span class="dmeta-i">⚠️ ไปต่อแถวก่อน 16:45</span>
-            </div>
-            <div style="margin-top:8px"><a href="http://www.s-garaku.com/" class="act-url">🔗 GARAKU Official</a></div>
-          </div>
-
-          <div class="dpane" id="dd-e">
-            <div class="dname">🦑 Hokkaido Seafood Izakaya Saburo — ซีฟู้ดสด นั่งชิล</div>
-            <div class="ddesc">อิซากายะซีฟู้ด Hokkaido สด ปูขน ซูชิ ทะเลสด · บรรยากาศสนุก พนักงานเป็นกันเองกับนักท่องเที่ยว<br>เหมาะถ้าอยากนั่งดื่ม-กินแบบผ่อนคลาย ไม่รีบ · เปิดดึกมาก ไม่ต้องรีบ</div>
-            <div class="dmeta">
-              <span class="dmeta-i">⭐ <strong>4.4</strong> (1,525 รีวิว)</span>
-              <span class="dmeta-i">🕔 <strong>18:00</strong>–05:00</span>
-              <span class="dmeta-i">💴 ¥3,000–5,000/คน</span>
-              <span class="dmeta-i">📍 Minami 6-jo Nishi 4 · เดิน ~3 นาที</span>
-            </div>
-          </div>
-        </div>
-      </li>
+      <li class="act"><div class="at">20:00</div><div class="ac"><div class="name">🐑 Jingisukan (เนื้อแกะย่าง)</div><div class="desc"><strong>Daikoku (大黒)</strong> ใน Susukino ¥2,000–2,500 หรือ Soup Curry ที่ Garaku ¥1,500</div></div></li>
     </ul>
     <div class="overnight">🛏️ คืนนี้นอน: Hotel Livemax Sapporo Susukino</div>
   </div>
@@ -527,9 +420,9 @@ hr.snow{border:none;border-top:1px dashed var(--border);margin:20px 0}
     </div>
   </div>
   <div class="day-body">
-    <div class="tstrip ts-d">🚗 Nippon Rent-a-Car Susukino (รับ 08:00) → E5 เหนือ ~130 กม. ~1.5 ชม. → Asahikawa</div>
+    <div class="tstrip ts-d">🚗 Nippon Rental Car Susukino (รับ 09:00) → E5 เหนือ ~130 กม. ~1.5 ชม. → Asahikawa</div>
     <ul class="acts">
-      <li class="act"><div class="at">08:00</div><div class="ac"><div class="name">🚗 รับรถ Nippon Rent-a-Car Susukino</div><div class="desc">Toyota Noah · ยืนยัน Winter Tires + ETC Card + CDW ก่อนออก</div></div></li>
+      <li class="act"><div class="at">09:00</div><div class="ac"><div class="name">🚗 รับรถ Nippon Rental Car Susukino</div><div class="desc">Subaru Forester · ยืนยัน Winter Tires + ETC Card + CDW ก่อนออก</div></div></li>
       <li class="act"><div class="at">09:30</div><div class="ac"><div class="name">🦒 Asahiyama Zoo (旭山動物園)</div><div class="desc">สวนสัตว์ดังที่สุดในญี่ปุ่น · เปิด 09:30 · ¥1,000/คน · ใช้เวลา 2.5–3 ชม.<br>ไฮไลท์: หมีขั้วโลก · แมวน้ำอุโมงค์ · นกเพนกวิน King</div><a href="https://www.city.asahikawa.hokkaido.jp/asahiyamazoo/en/" class="act-url">🔗 Asahiyama Zoo</a></div></li>
       <li class="act"><div class="at">13:00</div><div class="ac"><div class="name">🍜 Asahikawa Ramen มื้อเที่ยง</div><div class="desc">โชยุ (น้ำใส) หรือมิโสะ + ไขมันหมูลอยหน้า รสเข้มข้นกลมกล่อม ¥900–1,200<br>· <strong>Hachiya (蜂屋)</strong> — ต้นตำรับ 70+ ปี<br>· <strong>Aoba (青葉)</strong> — ใกล้ Art Hotel เดินได้<br>· <strong>Baikouken (梅光軒)</strong> — โชยุสูตรคลาสสิก</div><a href="https://www.google.com/maps/search/Asahikawa+Ramen" class="act-url">🔗 แผนที่ร้านราเมง</a></div></li>
       <li class="act"><div class="at">15:00</div><div class="ac"><div class="name">🍶 Otokoyama Sake Brewery Museum — ฟรีทั้งหมด!</div><div class="desc">โรงกลั่นสาเก 350 ปี · เข้าฟรี · ชิมสาเก 3 แก้วฟรี + พรีเมียม ¥200 ต่อแก้ว<br>VTR แนะนำมีภาษาไทย! · เปิด 09:00–17:00 · ห่างจากใจกลาง ~15 นาทีรถ</div><a href="https://www.otokoyama.com/museum/en/" class="act-url">🔗 Otokoyama Museum</a></div></li>
@@ -657,62 +550,6 @@ hr.snow{border:none;border-top:1px dashed var(--border);margin:20px 0}
 
 <hr class="snow">
 
-<!-- ═══ SAFETY / FOOD IN CAR ═══ -->
-<div id="safety">
-<div class="sec-head">
-  <div class="sec-icon" style="background:#edfaf0">🛒</div>
-  <h2>ข้อควรปฏิบัติการเดินทาง — เตรียมอาหารไว้ในรถ</h2>
-</div>
-<div class="warn">⚠️ <strong>สภาพอากาศฮอกไกโด พ.ย. คาดเดาได้ยาก</strong> — อาจเกิดหิมะตกกะทันหัน หมอกหนา ทัศนวิสัยต่ำ หรือถนนลื่น ทำให้ต้องจอดรอในรถนานได้โดยไม่คาดคิด <strong>ควรมีอาหารและน้ำสำรองในรถทุกวันที่ขับ (16–18 พ.ย.)</strong></div>
-<div class="safety-grid">
-  <div class="safety-card">
-    <h4>🍙 อาหารที่ควรซื้อไว้ในรถ</h4>
-    <ul>
-      <li><strong>Onigiri</strong> — ข้าวปั้น 2–3 อัน/คน อิ่มนาน ¥130–200</li>
-      <li><strong>Sandwich / Bread</strong> — กินได้ทันที ไม่ต้องอุ่น</li>
-      <li><strong>Cup Noodle</strong> — ขอน้ำร้อนที่ konbini ฟรี ตอนแวะ</li>
-      <li><strong>Corn Soup กระป๋อง</strong> — อุ่นพร้อมดื่ม จากตู้หยอดเหรียญ</li>
-      <li><strong>ช็อกโกแลต / Snack bar</strong> — ให้พลังงานเร็ว เช่น KitKat, Royce</li>
-      <li><strong>Mochi / ขนมข้าวเหนียว</strong> — เก็บได้นาน ทนอุณหภูมิหนาว</li>
-    </ul>
-  </div>
-  <div class="safety-card">
-    <h4>☕ เครื่องดื่มที่ควรมีติดรถ</h4>
-    <ul>
-      <li><strong>น้ำเปล่า</strong> — อย่างน้อย 1.5L/คน ป้องกันขาดน้ำอากาศแห้ง</li>
-      <li><strong>ชาร้อน / กาแฟกระป๋อง</strong> — BOSS / Georgia จากตู้หยอดเหรียญ ¥130</li>
-      <li><strong>Hokkaido Milk กล่อง</strong> — รสชาติดีที่สุดที่นี่</li>
-      <li><strong>โกโก้ร้อน</strong> — อุ่นใจในอากาศหนาว</li>
-      <li><strong>น้ำผลไม้กล่อง</strong> — สำรองสำหรับทุกคน</li>
-    </ul>
-  </div>
-  <div class="safety-card warn-card">
-    <h4>⚡ วิธีซื้อ — ทำตอนเช้าก่อนออกรถ</h4>
-    <ul>
-      <li>แวะ <strong>7-Eleven / Lawson / FamilyMart</strong> ใกล้โรงแรมก่อนออก</li>
-      <li>สาขา konbini ในฮอกไกโดมีทุก 3–5 กม. แม้บนถนนชนบท</li>
-      <li>ซื้อวัน <strong>16 พ.ย.</strong> ก่อนออก Sapporo</li>
-      <li>ซื้อวัน <strong>17 พ.ย.</strong> ก่อนออก Asahikawa</li>
-      <li>ซื้อวัน <strong>18 พ.ย.</strong> ก่อนออก Furano</li>
-      <li>เผื่องบ <strong>¥1,000–1,500/คน/วัน</strong></li>
-    </ul>
-  </div>
-  <div class="safety-card warn-card">
-    <h4>🚗 กรณีฉุกเฉิน — ติดอยู่ในรถนาน</h4>
-    <ul>
-      <li><strong>ไม่ดับเครื่อง</strong> — เปิดเครื่องให้ความอบอุ่น เปิดหน้าต่างรอยเล็กน้อย ป้องกัน CO</li>
-      <li><strong>เปิด Hazard Light</strong> ทันทีที่จอดฉุกเฉิน</li>
-      <li><strong>Nippon Rent-a-Car สายด่วน:</strong> 0120-919-037</li>
-      <li><strong>Google Maps Offline</strong> — ดาวน์โหลดแผนที่ฮอกไกโดก่อนออกเดินทาง</li>
-      <li><strong>ตำรวจ: 110 · กู้ภัย: 119</strong></li>
-    </ul>
-  </div>
-</div>
-<div class="tip">💡 <strong>Pro Tip — Pocket Warmer (ไส้กรอกร้อน):</strong> konbini ขาย <strong>貼るカイロ (Pocket Warmer)</strong> ¥100–200 ใส่ไว้ในกระเป๋าหรือถุงมือ ช่วยได้มากตอนเดิน Jigokudani หรือรอดู Blue Pond Illumination ยามหนาว</div>
-</div>
-
-<hr class="snow">
-
 <!-- ═══ FOOD GUIDE ═══ -->
 <div id="food">
 <div class="sec-head">
@@ -812,13 +649,5 @@ hr.snow{border:none;border-top:1px dashed var(--border);margin:20px 0}
 </div>
 
 </div><!-- /wrap -->
-<script>
-function showDinner(opt, btn) {
-  document.querySelectorAll('.dpane').forEach(el => el.classList.remove('show'));
-  document.querySelectorAll('.dtab').forEach(el => el.classList.remove('da','db','dc','dd','de'));
-  document.getElementById('dd-' + opt).classList.add('show');
-  btn.classList.add('d' + opt);
-}
-</script>
 </body>
 </html>
